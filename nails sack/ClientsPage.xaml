@@ -1,0 +1,33 @@
+﻿<Page x:Class="nails_sack.ClientsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:nails_sack"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientsPage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF6C69C7" Offset="0.143"/>
+                <GradientStop Color="#FFC77EBD" Offset="0.963"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox HorizontalAlignment="Left" Height="126" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="592"  Text="NAIL PEACH&#xA; " Background="{x:Null}" Foreground="#FFB279BF" FontSize="100" FontFamily="Impact" BorderBrush="{x:Null}"/>
+        <Button Content="Список клиентуры" x:Name="ClientsButton" HorizontalAlignment="Left" Margin="23,141,0,243" Width="196" Background="#FF776CC6" BorderBrush="#FF6D63B2" Foreground="#FFBC96DE" FontSize="24" FontFamily="Arial Narrow" BorderThickness="5,1,5,1" />
+        <Button Content="Сотрудники" x:Name="StaffButton" Margin="23,212,0,172" Background="#FFBC96DE" BorderBrush="#FF776CC6" Foreground="#FF6C69C7" FontSize="25" FontFamily="Arial Narrow" BorderThickness="5,1,5,1" HorizontalAlignment="Left" Width="196" Click="StaffButton_Click"/>
+        <Button Content="Услуги" x:Name="ServiceButton" HorizontalAlignment="Left" Margin="23,283,0,101" Width="196" Background="#FFBC96DE" BorderBrush="#FF776CC6" Foreground="#FF6C69C7" Click="ServiseButton_Click" FontSize="25" FontFamily="Arial Narrow" BorderThickness="5,1,5,1"/>
+        <Button Content="Брони" x:Name="OrdersButton" Margin="23,354,0,30" Background="#FFBC96DE" BorderBrush="#FF776CC6" Foreground="#FF6C69C7" FontSize="25" FontFamily="Arial Narrow" BorderThickness="5,1,5,1" HorizontalAlignment="Left" Width="196" Click="OrdersButton_Click"/>
+        <DataGrid x:Name = "ClientsGrid" AutoGenerateColumns="False"  Height="275" Margin="240,145,127,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="14">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding clientID}"/>
+                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Почта" Width="*" Binding="{Binding e_mail}"/>
+                <DataGridTextColumn Header="Телефон" Width="*" Binding="{Binding phone}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</Page>
